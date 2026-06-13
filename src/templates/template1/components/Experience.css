@@ -1,0 +1,171 @@
+/* ===============================
+   EXPERIENCE SECTION - SCOPED
+================================ */
+.template1-root .experience-section {
+  min-height: 100vh;
+  padding: 100px 50px;
+}
+
+.template1-root .experience-section h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 80px;
+}
+
+/* ===============================
+   TIMELINE
+================================ */
+.template1-root .timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Vertical glowing line */
+.template1-root .timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  transform: translateX(-50%);
+  display: none;
+  /* Handled by dynamic-timeline-line */
+}
+
+/* ===============================
+   ITEMS
+================================ */
+.template1-root .timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.template1-root .timeline-item.left {
+  left: 0;
+  text-align: right;
+  transform: translateX(-60px);
+}
+
+.template1-root .timeline-item.right {
+  left: 50%;
+  text-align: left;
+  transform: translateX(60px);
+}
+
+/* Glow dot */
+.template1-root .timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: none;
+  /* Handled by dynamic-dot */
+}
+
+.template1-root .timeline-item.left::before {
+  right: -7px;
+}
+
+.template1-root .timeline-item.right::before {
+  left: -7px;
+}
+
+/* ===============================
+   CONTENT CARD
+================================ */
+.template1-root .timeline-content {
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  /* Brighter border */
+  border-radius: 16px;
+  padding: 25px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Shining sweep effect */
+.template1-root .timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
+  transition: 0.6s;
+  pointer-events: none;
+}
+
+.template1-root .timeline-content:hover::before {
+  left: 100%;
+}
+
+.template1-root .timeline-content:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-color: rgba(255, 255, 255, 0.5);
+  /* Pop out border */
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.7),
+    inset 0 1px 3px rgba(255, 255, 255, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.template1-root .timeline-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.template1-root .timeline-org {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.template1-root .timeline-time {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.template1-root .timeline-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* When visible */
+.template1-root .timeline-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 900px) {
+  .template1-root .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+    text-align: left !important;
+  }
+
+  .template1-root .timeline-item.left,
+  .template1-root .timeline-item.right {
+    left: 0;
+    transform: translateX(0);
+    /* Avoid collision with mobile logic */
+  }
+}

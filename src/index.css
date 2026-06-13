@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #000000;
+  --secondary: #666666;
+  --accent: #0070f3;
+  --background: #ffffff;
+  --foreground: #000000;
+  --selection: #ffdd00;
+
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.08);
+
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--selection);
+  color: var(--primary);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Global Typography */
+.global-section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.global-section-subtitle {
+  font-size: 1.125rem;
+  color: #666;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.global-section-header {
+  margin-bottom: 60px;
+}
+
+/* Premium Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+  gap: 8px;
+  font-family: var(--font-heading);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: #fff;
+  border: 1px solid var(--glass-border);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background: #f9f9f9;
+  border-color: #000;
+}
+
+/* Section Spacing */
+section {
+  padding: 100px 0;
+}
+
+/* Stencil classes mapped to new ones for compatibility if JSX isn't updated immediately */
+.stencil-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #000;
+}

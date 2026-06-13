@@ -1,0 +1,151 @@
+/* ===============================
+   SKILLS SECTION - SCOPED
+================================ */
+.template1-root .skills-section {
+  min-height: 100vh;
+  padding: 80px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.template1-root .skills-section h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.template1-root .skills-container {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* ===============================
+   FILTERS
+================================ */
+.template1-root .skills-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.template1-root .filter-btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 2px solid rgba(30, 201, 168, 0.35);
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.template1-root .filter-btn.active,
+.template1-root .filter-btn:hover {
+  color: #05070d;
+  transform: translateX(4px);
+}
+
+/* ===============================
+   SKILLS GRID (HEX LAYOUT)
+================================ */
+.template1-root .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 50px 40px;
+  flex: 1;
+  justify-items: center;
+  align-items: center;
+}
+
+/* ===============================
+   HEXAGON SKILL CARD
+================================ */
+.template1-root .skill-card {
+  position: relative;
+  width: 150px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.8));
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  /* Brighter border */
+  backdrop-filter: blur(12px);
+  text-align: center;
+  font-weight: 700;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.template1-root .skill-card:hover {
+  transform: translateY(-10px) scale(1.08);
+  /* More pop */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.7));
+  border-color: rgba(255, 255, 255, 0.5);
+  /* Pop out border with white */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.template1-root .skill-card::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  clip-path: inherit;
+  border: 1px solid rgba(30, 201, 168, 0.25);
+  pointer-events: none;
+}
+
+.template1-root .skill-icon {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.template1-root .skill-card p {
+  font-size: 14px;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.template1-root .skill-card.highlighted {
+  transform: translateY(-6px) scale(1.08);
+}
+
+.template1-root .skill-card.dimmed {
+  opacity: 0.25;
+  transform: scale(0.95);
+  filter: grayscale(40%);
+}
+
+@media (max-width: 1024px) {
+  .template1-root .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .template1-root .skills-filters {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .template1-root .skill-card {
+    width: 130px;
+    height: 150px;
+  }
+}

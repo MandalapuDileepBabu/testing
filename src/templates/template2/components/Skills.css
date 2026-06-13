@@ -1,0 +1,52 @@
+.template2-root .t2-skills-section {
+    padding: 100px 0;
+}
+
+.template2-root .t2-skills-header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.template2-root .t2-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.template2-root .t2-skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.template2-root .t2-skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--text);
+    font-size: 1.1rem;
+}
+
+.template2-root .t2-skill-bar-bg {
+    width: 100%;
+    height: 10px;
+    background: rgba(128, 128, 128, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.05);
+}
+
+.template2-root .t2-skill-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--accent);
+}
+
+@media (max-width: 600px) {
+    .template2-root .t2-skills-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,176 @@
+.how-it-works {
+    background: #ffffff;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 60px auto 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #0070f3, #7928ca, transparent);
+    transform: translateX(-50%);
+    animation: growLine 2s ease-out forwards;
+}
+
+@keyframes growLine {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+.steps-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.step-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.step-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.step-item:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-card {
+    width: 45%;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+/* Beautiful Floating Effect */
+.step-item:hover .step-card {
+    transform: scale(1.05) translateY(-10px);
+    border-color: #0070f3;
+    box-shadow: 0 30px 60px rgba(0, 112, 243, 0.12);
+}
+
+.step-item.left {
+    justify-content: flex-start;
+}
+
+.step-item.right {
+    justify-content: flex-end;
+}
+
+.step-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: #0070f3;
+    margin-bottom: 12px;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(0, 112, 243, 0.05);
+    border-radius: 99px;
+}
+
+.step-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.step-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.step-dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: #000;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 0 0 4px rgba(0, 112, 243, 0.1);
+    transition: all 0.3s ease;
+}
+
+.step-item:hover .step-dot {
+    background: #0070f3;
+    transform: translate(-50%, -50%) scale(1.5);
+    box-shadow: 0 0 20px rgba(0, 112, 243, 0.4);
+}
+
+.how-it-works .highlight {
+    color: #0070f3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+        transform: none;
+    }
+
+    .step-dot {
+        left: 20px;
+        transform: translateY(-50%);
+    }
+
+    .step-item:hover .step-dot {
+        transform: translateY(-50%) scale(1.2);
+    }
+
+    .step-card {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+    }
+
+    .step-item.left,
+    .step-item.right {
+        justify-content: flex-start;
+    }
+}

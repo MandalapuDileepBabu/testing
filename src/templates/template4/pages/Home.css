@@ -1,0 +1,206 @@
+.t4-home-page {
+    padding-top: 80px;
+}
+
+.t4-hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.t4-hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.t4-hero-greeting {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.t4-hero-name {
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.t4-hero-role {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--text-secondary);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.t4-hero-bio {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+}
+
+.t4-hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.t4-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-mono);
+}
+
+.t4-btn-primary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.t4-btn-primary:hover {
+    background: var(--accent-tint);
+}
+
+.t4-btn-outline {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+}
+
+.t4-btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.t4-btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+.t4-social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.t4-social-links a {
+    color: var(--text-secondary);
+    transition: color 0.2s, transform 0.2s;
+}
+
+.t4-social-links a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.t4-hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.t4-hero-image-placeholder {
+    width: 300px;
+    height: 300px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+.t4-hero-image-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: -15px;
+    bottom: -15px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    z-index: -1;
+}
+
+/* Projects Preview Grid */
+.t4-projects-grid-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Skills Mini Grid */
+.t4-skills-grid-mini {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+.t4-skill-item-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    transition: transform 0.2s, border-color 0.2s;
+    border: 1px solid var(--border);
+}
+
+.t4-skill-item-mini:hover {
+    transform: translateY(-2px);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* CTA Section */
+.t4-cta-section {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.t4-cta-section p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .t4-hero-section {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: flex-start;
+    }
+
+    .t4-hero-image-wrapper {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .t4-hero-image-placeholder {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+}

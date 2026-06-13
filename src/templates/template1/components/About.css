@@ -1,0 +1,75 @@
+/* ================================
+   ABOUT SECTION - SCOPED
+================================ */
+.template1-root .about-section {
+  width: 100%;
+  padding: 100px 50px;
+}
+
+/* Centered layout */
+.template1-root .about-content.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content box */
+.template1-root .about-left {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* ===== Decorative Lines ===== */
+.template1-root .about-lines {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.template1-root .about-lines span {
+  height: 4px;
+  border-radius: 4px;
+}
+
+.template1-root .about-lines span:first-child {
+  width: 60px;
+}
+
+.template1-root .about-lines span:last-child {
+  width: 30px;
+}
+
+/* Heading */
+.template1-root .about-left h2 {
+  font-size: 3.6rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+/* Main paragraph */
+.template1-root .about-main-text {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  margin-bottom: 26px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* Supporting paragraph */
+.template1-root .about-sub-text {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .template1-root .about-left h2 {
+    font-size: 3rem;
+  }
+
+  .template1-root .about-main-text {
+    font-size: 1.1rem;
+  }
+}

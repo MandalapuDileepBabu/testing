@@ -1,0 +1,125 @@
+.template3-root .hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 120px;
+  position: relative;
+  background-color: transparent;
+}
+
+.template3-root .particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.template3-root .glow-top {
+  top: -100px;
+  left: calc(50% - 250px);
+}
+
+.template3-root .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.template3-root .badge-wrapper {
+  animation: t3-fade-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.template3-root .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.template3-root .badge-icon {
+  color: var(--color-primary);
+}
+
+.template3-root .hero-title {
+  font-size: 3.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  margin: 8px 0;
+  animation: t3-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+@media (max-width: 768px) {
+  .template3-root .hero-title {
+    font-size: 2.25rem;
+  }
+}
+
+.template3-root .hero-description {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 650px;
+  color: var(--text-secondary);
+  animation: t3-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+@media (max-width: 768px) {
+  .template3-root .hero-description {
+    font-size: 1rem;
+  }
+}
+
+.template3-root .hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  animation: t3-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+@media (max-width: 480px) {
+  .template3-root .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  .template3-root .hero-actions a {
+    justify-content: center;
+  }
+}
+
+@keyframes t3-fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes t3-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

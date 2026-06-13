@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+.template2-root {
+    /* Dynamic Variables */
+    --accent: var(--accent-color, #00eaff);
+    --radius: 22px;
+
+    /* Shared Defaults */
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    position: relative;
+}
+
+/* Dark Mode (Default) */
+.template2-root[data-theme="dark"] {
+    --dark-bg: var(--user-bg, #0d0f11);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text: #f5f7f8;
+    --text-muted: #9ea3a8;
+    color: var(--text);
+    background: var(--dark-bg);
+}
+
+/* Light Mode */
+.template2-root[data-theme="light"] {
+    --dark-bg: #f7fbfd;
+    --card-bg: #ffffff;
+    --text: #0c1012;
+    --text-muted: #4b6b73;
+    color: var(--text);
+    background: var(--dark-bg);
+}
+
+.template2-root * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.template2-root .container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+@media(max-width: 768px) {
+    .template2-root .container {
+        padding: 0 4%;
+    }
+}

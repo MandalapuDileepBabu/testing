@@ -1,0 +1,205 @@
+.t4-about-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.t4-about-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.t4-about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .t4-about-content {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: start;
+    }
+}
+
+.t4-about-text-section p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.t4-highlight {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.t4-about-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.t4-stat-card {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+}
+
+.t4-stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.t4-stat-icon {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.t4-stat-card h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.t4-stat-card p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Image Column */
+.t4-about-image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t4-about-image-placeholder {
+    width: 300px;
+    height: 300px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    border: 2px solid var(--accent);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme='light'] .t4-about-image-placeholder {
+    background-color: #ffffff;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.t4-about-image-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: -20px;
+    bottom: -20px;
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 1;
+}
+
+/* Certifications */
+.t4-certifications-section,
+.t4-hobbies-section {
+    margin-bottom: 4rem;
+}
+
+.t4-cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.t4-cert-card-display {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.t4-cert-card-display:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.t4-cert-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.t4-cert-card-details h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.t4-cert-card-details p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Hobbies */
+.t4-hobbies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.t4-hobbies-list li {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.t4-hobbies-list li::before {
+    content: '•';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Cert Modal */
+.t4-cert-modal-large {
+    max-width: 500px;
+}
+
+.t4-cert-placeholder {
+    height: 300px;
+    background: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 8px;
+    color: var(--text-secondary);
+}

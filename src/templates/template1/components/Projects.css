@@ -1,0 +1,129 @@
+/* ===============================
+   PROJECTS SECTION - SCOPED
+================================ */
+.template1-root .projects-section {
+  min-height: 100vh;
+  padding: 100px 50px;
+}
+
+.template1-root .projects-section h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+/* ===============================
+   WRAPPER
+================================ */
+.template1-root .projects-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex !important;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.template1-root .projects-cards {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  flex: 1;
+}
+
+.template1-root .project-card {
+  padding: 28px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  /* More visible border */
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shining sweep effect */
+.template1-root .project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
+  transition: 0.6s;
+  pointer-events: none;
+}
+
+.template1-root .project-card:hover::before {
+  left: 100%;
+}
+
+.template1-root .project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  border-color: rgba(255, 255, 255, 0.5);
+  /* Pop out border */
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.6),
+    inset 0 1px 3px rgba(255, 255, 255, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.template1-root .project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.template1-root .project-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.template1-root .project-card span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ===============================
+   RIGHT SIDE CONTROL
+================================ */
+.template1-root .projects-next {
+  cursor: pointer;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.template1-root .projects-next:hover {
+  transform: translateX(6px);
+}
+
+.template1-root .projects-next span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+@media (max-width: 900px) {
+  .template1-root .projects-wrapper {
+    flex-direction: column !important;
+  }
+
+  .template1-root .projects-cards {
+    grid-template-columns: 1fr !important;
+  }
+}

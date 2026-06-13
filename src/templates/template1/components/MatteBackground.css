@@ -1,0 +1,20 @@
+.template1-root .matte-background {
+  position: absolute;
+  inset: 0;
+  /* Keep the texture and gradients, but make the base background transparent 
+     so the inline style from the component can take over */
+  background:
+    radial-gradient(circle at 18% 28%,
+      rgba(245, 201, 106, 0.045),
+      transparent 45%),
+    radial-gradient(circle at 82% 62%,
+      rgba(30, 201, 168, 0.045),
+      transparent 50%),
+    repeating-linear-gradient(0deg,
+      rgba(255, 255, 255, 0.018),
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px,
+      transparent 2px);
+  z-index: 1;
+  pointer-events: none;
+}

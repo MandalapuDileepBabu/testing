@@ -1,0 +1,170 @@
+/* ===============================
+   CONTACT SECTION - SCOPED
+================================ */
+.template1-root .contact-section {
+    padding: 100px 50px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.template1-root .contact-section h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.template1-root .contact-subtext {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.template1-root .contact-container {
+    display: flex !important;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.template1-root .contact-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Shining sweep effect */
+.template1-root .contact-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.05),
+            transparent);
+    transition: 0.6s;
+    pointer-events: none;
+}
+
+.template1-root .contact-card:hover::before {
+    left: 100%;
+}
+
+.template1-root .contact-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.template1-root .icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.template1-root .contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.template1-root .contact-card p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.template1-root .contact-link {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: opacity 0.2s;
+}
+
+.template1-root .contact-link:hover {
+    opacity: 0.8;
+}
+
+/* Footer Styling */
+.template1-root .template-footer {
+    width: 100%;
+    padding: 60px 50px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.template1-root .footer-content {
+    display: flex !important;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.template1-root .footer-logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.template1-root .footer-socials {
+    display: flex !important;
+    gap: 20px;
+}
+
+.template1-root .social-icon {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.template1-root .social-icon:hover {
+    transform: scale(1.2);
+}
+
+.template1-root .footer-bottom {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .template1-root .contact-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .template1-root .footer-content {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+}

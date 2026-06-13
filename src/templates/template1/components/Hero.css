@@ -1,0 +1,405 @@
+/* ================================
+   PROFESSIONAL DARK BLUE + GOLDISH GREEN THEME
+   SCOPED TO .template1-root TO AVOID CONFLICTS
+================================ */
+
+.template1-root {
+  color-scheme: dark;
+}
+
+.template1-root .hero {
+  min-height: 100vh;
+  color: #ffffff !important;
+  padding: 40px 80px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Canvas - Fixed positioning behind content */
+.template1-root .professional-blob {
+  position: absolute !important;
+  top: -15% !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 130vh !important;
+  z-index: 1 !important;
+  pointer-events: none;
+}
+
+.template1-root .matte-background {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ================================
+   NAVBAR - High priority
+================================ */
+.template1-root .nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 50 !important;
+  /* Ensure it stays above everything */
+  backdrop-filter: blur(20px);
+  padding: 18px 40px;
+  border-radius: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.template1-root .logo {
+  font-size: 24px;
+  font-weight: 800;
+  display: block;
+}
+
+.template1-root .t1-hamburger {
+  display: none;
+}
+
+.template1-root .nav ul {
+  display: flex !important;
+  gap: 35px !important;
+  list-style: none !important;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.template1-root .nav ul li {
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.template1-root .nav ul li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ================================
+   HERO CONTENT
+================================ */
+.template1-root .hero-content {
+  margin-top: 100px;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  align-items: center;
+  z-index: 10 !important;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 50px;
+  position: relative;
+}
+
+/* Typography scoped */
+.template1-root .hero-left h1 {
+  font-size: 3.8rem;
+  margin: 18px 0 22px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1.4px;
+  color: #fff !important;
+}
+
+.template1-root .portfolio-word {
+  display: inline-block;
+  color: inherit;
+  position: relative;
+  background: linear-gradient(to right,
+      #fff 20%,
+      rgba(255, 255, 255, 0.7) 40%,
+      #fff 60%,
+      #fff 80%);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineText 3s linear infinite;
+}
+
+@keyframes shineText {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.template1-root .tagline {
+  font-size: 17px;
+  margin: 28px 0 38px;
+  line-height: 1.75;
+  max-width: 420px;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ================================
+   BUTTONS - Scoped to avoid conflict with Landing Page
+================================ */
+.template1-root .btn-primary {
+  padding: 18px 42px;
+  border: none !important;
+  border-radius: 35px !important;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 17px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  color: #fff !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.template1-root .btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transition: 0.5s;
+}
+
+.template1-root .btn-primary:hover::before {
+  left: 100%;
+}
+
+.template1-root .btn-primary:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.template1-root .btn-outline {
+  margin-top: 25px;
+  padding: 16px 36px;
+  background: transparent !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border-radius: 30px !important;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  backdrop-filter: blur(20px);
+  transition: all 0.4s ease;
+}
+
+.template1-root .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* ================================
+   AVATAR
+================================ */
+.template1-root .avatar-wrap {
+  width: 340px;
+  height: 420px;
+  border-radius: 55% 45% 40% 60% / 60% 45% 55% 40%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  animation: t1PremiumFloat 7s ease-in-out infinite;
+  position: relative;
+  z-index: 5;
+}
+
+@keyframes t1PremiumFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.template1-root .avatar-wrap img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 8px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+}
+
+/* ================================
+   HERO STATS
+================================ */
+.template1-root .hero-stats {
+  margin-top: 110px;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 40px;
+  z-index: 10 !important;
+  position: relative;
+}
+
+.template1-root .stat-card {
+  width: 220px;
+  padding: 35px 20px;
+  border-radius: 26px;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  /* Slightly thicker and brighter */
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  animation: t1StatFloat 6s ease-in-out infinite;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shining sweep effect */
+.template1-root .stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.12),
+      transparent);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.template1-root .stat-card:hover::before {
+  left: 100%;
+}
+
+.template1-root .stat-card h2 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.template1-root .stat-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  border-color: rgba(255, 255, 255, 0.5);
+  /* Pop out with white blend */
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    inset 0 1px 4px rgba(255, 255, 255, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.15);
+  /* Stronger glow */
+}
+
+.template1-root .stat-card.highlight {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes t1StatFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 1300px) {
+  .template1-root .hero-content {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .template1-root .hero {
+    padding: 20px;
+  }
+
+  .template1-root .hero-content {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    margin-top: 60px;
+    gap: 30px;
+  }
+
+  .template1-root .nav {
+    padding: 15px 25px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between !important;
+  }
+
+  .template1-root .t1-hamburger {
+    display: block !important;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .template1-root .nav ul {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(5, 7, 13, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    gap: 30px !important;
+    transition: left 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 90;
+  }
+
+  .template1-root .nav ul.active {
+    left: 0;
+  }
+
+  .template1-root .nav ul li {
+    font-size: 20px;
+  }
+
+  .template1-root .hero-stats {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  /* Center the egg section (avatar-wrap) */
+  .template1-root .hero-center {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .template1-root .avatar-wrap {
+    width: 280px !important;
+    height: 350px !important;
+    margin: 0 auto !important;
+  }
+}

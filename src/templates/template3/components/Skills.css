@@ -1,0 +1,144 @@
+.template3-root .skills-section {
+  background-color: transparent;
+  position: relative;
+}
+
+.template3-root .skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.template3-root .skills-sub-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.template3-root .sub-group-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  position: relative;
+  align-self: flex-start;
+  padding-bottom: 6px;
+}
+
+.template3-root .sub-group-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* Technical Skills Grid */
+.template3-root .tech-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .template3-root .tech-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.template3-root .tech-skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  gap: 12px;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.template3-root .tech-skill-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--skill-color) !important;
+  box-shadow: 0 6px 20px var(--skill-glow) !important;
+}
+
+.template3-root .tech-icon-container {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template3-root .tech-skill-card:hover .tech-icon-container {
+  color: var(--skill-color);
+  transform: scale(1.08);
+}
+
+.template3-root .tech-skill-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Soft Skills */
+.template3-root .soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .template3-root .soft-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.template3-root .soft-skill-card {
+  padding: 28px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.template3-root .soft-skill-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.template3-root .soft-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.template3-root .soft-skill-icon {
+  flex-shrink: 0;
+}
+
+.template3-root .soft-skill-icon.text-cyan { color: #00f2fe; }
+.template3-root .soft-skill-icon.text-purple { color: #c084fc; }
+.template3-root .soft-skill-icon.text-pink { color: #ff007f; }
+
+.template3-root .soft-card-header h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.template3-root .soft-skill-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}

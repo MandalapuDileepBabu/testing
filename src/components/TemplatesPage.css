@@ -1,0 +1,331 @@
+.templates-page-container {
+    min-height: 100vh;
+    padding: 40px 40px 60px;
+    background-color: #fafafa;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Back Button styling */
+.templates-back-btn {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 10;
+}
+
+.templates-back-btn:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+    transform: translateX(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .templates-back-btn {
+        top: 20px;
+        left: 20px;
+    }
+}
+
+.templates-user-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.8s ease-out;
+}
+
+.user-greeting {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #666;
+}
+
+.user-highlight {
+    color: #000;
+    font-weight: 800;
+}
+
+.minimal-logout-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.minimal-logout-btn:hover {
+    background: #ff4444;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.2);
+}
+
+.templates-page-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.templates-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #000;
+    color: #fff;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.templates-main-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.templates-subheading {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.templates-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.template-select-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.template-select-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    border-color: #000;
+}
+
+.template-visual-preview {
+    height: 380px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.template-preview-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.template-select-card:hover .template-preview-image {
+    transform: scale(1.05);
+}
+
+.preview-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.preview-shape {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.preview-line {
+    height: 12px;
+    width: 80%;
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.preview-line.short {
+    width: 50%;
+}
+
+.selection-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.template-select-card:hover .selection-overlay {
+    opacity: 1;
+}
+
+.select-template-btn {
+    padding: 16px 32px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 99px; /* Oval shape */
+    font-weight: 700;
+    font-size: 15px;
+    transform: translateY(10px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.template-select-card:hover .select-template-btn {
+    transform: translateY(0);
+}
+
+.template-select-info {
+    padding: 24px;
+    flex-grow: 1;
+}
+
+.info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.info-top h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #000;
+}
+
+.category-pill {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.template-select-info p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Coming Soon Style */
+.coming-soon .template-visual-preview {
+    background: #fcfcfc;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+.coming-soon-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #aaa;
+}
+
+.coming-soon-content span {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Base Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .templates-page-container {
+        padding: 80px 20px 40px;
+    }
+
+    .templates-main-heading {
+        font-size: 2.5rem;
+    }
+}
