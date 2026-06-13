@@ -281,6 +281,12 @@
     font-weight: 700;
     text-decoration: none;
     margin-left: 5px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 /* Mobile Styling */

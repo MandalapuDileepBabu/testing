@@ -8,7 +8,6 @@ import {
 } from 'firebase/auth';
 import { auth, googleProvider } from '../firebase';
 import './Auth.css';
-import loginBg from '../assets/login-bg.png';
 
 export default function Auth() {
     const location = useLocation();
@@ -157,9 +156,9 @@ export default function Auth() {
                             <div className="auth-footer">
                                 <p>
                                     {isLogin ? "Don't have an account?" : "Already have an account?"}
-                                    <a href="#" onClick={toggleAuth} className="toggle-auth-link">
+                                    <button type="button" onClick={toggleAuth} className="toggle-auth-link">
                                         {isLogin ? ' Sign Up' : ' Sign In'}
-                                    </a>
+                                    </button>
                                 </p>
                             </div>
                         </div>
